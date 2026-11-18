@@ -1,9 +1,23 @@
+/* General Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
     background-color: #f4f4f4;
     color: #333;
 }
+
+
+/* Header */
 
 header {
     background-color: #222;
@@ -14,39 +28,63 @@ header {
     align-items: center;
 }
 
-nav a {
+header nav a {
     color: white;
     text-decoration: none;
     margin: 10px;
 }
 
-section {
-    padding: 50px;
-    text-align: center;
-}
+
+/* Home Section */
 
 #home {
     background-color: #333;
     color: white;
+    text-align: center;
     padding: 100px 20px;
 }
+
+#home h1 {
+    margin-bottom: 15px;
+}
+
+#home p {
+    margin-bottom: 20px;
+}
+
+
+/* Button */
 
 button {
     padding: 12px 25px;
     background-color: #007bff;
     color: white;
     border: none;
-    cursor: pointer;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
+
+/* Common Sections */
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+
+/* Skills */
+
 ul {
     list-style: none;
-    padding: 0;
 }
 
 li {
@@ -57,6 +95,9 @@ li {
     border-radius: 5px;
 }
 
+
+/* Projects */
+
 .project {
     background-color: white;
     padding: 20px;
@@ -65,9 +106,107 @@ li {
     border-radius: 8px;
 }
 
-footer {
+
+/* Contact */
+
+#contact {
+    background-color: #e9e9e9;
+}
+
+
+/* Footer Navigation */
+
+.footer {
     background-color: #222;
     color: white;
+    padding: 50px 8% 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-bottom: 35px;
+}
+
+.footer-logo h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.footer-logo span {
+    color: #00bcd4;
+}
+
+.footer-logo p {
+    color: #bbb;
+}
+
+.footer-navbar h3,
+.footer-social h3 {
+    margin-bottom: 18px;
+}
+
+.footer-navbar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-navbar a,
+.footer-social a {
+    color: #bbb;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-navbar a:hover,
+.footer-social a:hover {
+    color: #00bcd4;
+}
+
+.footer-bottom {
+    border-top: 1px solid #555;
     text-align: center;
-    padding: 15px;
+    padding-top: 20px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+
+/* Responsive Footer */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-navbar nav {
+        align-items: center;
+    }
+
+    .footer-social {
+        align-items: center;
+    }
+
 }
